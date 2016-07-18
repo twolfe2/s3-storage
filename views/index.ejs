@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="/css/style.css">
     <script src="/bower_components/angular/angular.min.js"></script>
     <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="/bower_components/ng-file-upload-shim/ng-file-upload-shim.min.js"></script>
+    <script src="/bower_components/ng-file-upload-shim/ng-file-upload.min.js"></script>
     <script src="/js/bundle.js"></script>
     
 </head>
@@ -15,15 +17,8 @@
 <body ng-app='myApp' ng-controller='mainCtrl'>
     <div class="container">
         <h1><%= title %></h1>
-        <!-- <ui-view></ui-view> -->
+        <ui-view></ui-view>
         <div>
-        <form action="/api/files" method="POST" enctype="multipart/form-data">
-            
-        <input type="file" name="newFile" id="">
-        <input type="text" placeholder="Filename", name='filename'>
-        <button>Submit</button>
-            
-        </form>
         </div>
     </div>
 </body>

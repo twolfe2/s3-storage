@@ -1,0 +1,28 @@
+<h1>Upload</h1>
+<form name='theForm' ng-submit='submit()' class='form-inline'>
+  Drop File:
+    <div ngf-drop ngf-select ng-model="photo" class="drop-box" 
+        ngf-drag-over-class="'dragover'"></div>
+   <!--  <div class="form-group">
+        <div class="button btn btn-primary"   
+          ngf-select 
+          ng-model='photo' 
+          name='photo'
+          ngf-max-size="50MB">Select File</div>
+    </div> -->
+    <!-- <div class="form-group" 
+    ng-class='{"has-error" : (theForm.textInput.$touched && theForm.textInput.$invalid), "has-success" : (theForm.textInput.$touched && theForm.textInput.$valid)}'>
+    <label for="textInput" class='control-label'>Text Input</label>
+    <input type="text" name='textInput' ng-model='textInput' class='form-control' id='textInput' required>
+  </div> -->
+  <div class="form-group">
+    <button class='btn btn-default'>Submit</button>
+  </div>
+</form>
+
+Image thumbnail: <img ngf-thumbnail="photo || '/thumb.jpg'">
+
+<pre>{{theForm | json}}</pre>
+
+
+<img ng-src="{{savedImage}}" alt="">
